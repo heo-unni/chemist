@@ -110,7 +110,7 @@ const NAV_ITEMS = [
   { id: "about", label: "연구 소개" },
   { id: "skills", label: "기술 역량" },
   { id: "experience", label: "경력·학력" },
-  { id: "projects-section", label: "연구 프로젝트" },
+  { id: "projects-section", label: "수행 프로젝트 목록" },
   { id: "publications", label: "논문·특허" },
   { id: "awards", label: "수상내역" },
   { id: "contact", label: "연락처" },
@@ -130,34 +130,20 @@ const SKILLS = [
   { id: "pifa", code: "Skill_03", title: "광산화 증폭 기술 (Photooxidation-Induced Fluorescence Amplification, PIFA)", summary: "광유도 친화성 표지 기반 정밀 분리 기술 적용", tags: ["Photo-induced Oxidation", "Affinity Labeling", "Membrane Protein"], detail: "광유도 산화(PIFA) 기술을 활용해 특정 막단백질 근접 영역을 정밀하게 표지하고, 엑소좀 표면 마커의 공간적 상호작용을 분석합니다." },
 ];
 
-const PROJECTS = [
-  { id: "p1", title: "혈액 유래 엑소좀 추출 및 정량 분석 파이프라인 구축", tags: ["Wet Lab", "Exosome"], period: "2023 — 2024",
-    background: "기존 엑소좀 분리법은 순도와 수율 편차가 커 정량 분석의 재현성이 낮았습니다.",
-    purpose: "표준화된 분리·정량 파이프라인을 구축해 후속 바이오마커 연구의 기반 데이터를 확보하는 것을 목표로 했습니다.",
-    method: "SEC와 초원심분리를 병행 적용하고, NTA·BCA·Western Blot으로 교차 검증하는 다단계 QC 체계를 설계했습니다.",
-    result: "기존 대비 순도 지표를 유의하게 개선했고, 배치 간 변동계수(CV)를 크게 낮춰 재현성을 확보했습니다.",
-    outcome: "해당 프로토콜은 후속 알츠하이머 진단 연구의 표준 실험 파이프라인으로 채택되었습니다." },
-  { id: "p2", title: "엑소좀 기반 알츠하이머 조기진단 바이오마커 발굴", tags: ["Dry Lab", "Exosome"], period: "2024 — 2025",
-    background: "알츠하이머는 증상 발현 전 병리학적 변화가 선행되지만, 비침습적 조기 진단 지표가 부족합니다.",
-    purpose: "혈액 유래 엑소좀 내 단백질 마커를 통해 비침습적 조기진단 가능성을 검증하고자 했습니다.",
-    method: "임상 코호트 시료에서 엑소좀을 분리해 ELISA로 마커를 정량하고, 통계 모델과 ROC 분석으로 진단 성능을 평가했습니다.",
-    result: "대조군 대비 유의미한 마커 발현 차이를 확인했으며, 진단 모델의 AUC 값에서 우수한 판별력을 확인했습니다.",
-    outcome: "관련 연구 결과를 학술지에 게재했고, 후속 임상 검증 연구로 확장되었습니다." },
-  { id: "p3", title: "PIFA 기반 엑소좀 막단백질 근접 표지 기술 개발", tags: ["Wet Lab", "PIFA"], period: "2022 — 2023",
-    background: "엑소좀 표면 단백질 간 공간적 상호작용을 규명할 정밀 표지 기술이 제한적이었습니다.",
-    purpose: "광유도 산화 반응을 활용한 근접 표지 기술을 엑소좀 시스템에 적용해 막단백질 상호작용을 규명하고자 했습니다.",
-    method: "PIFA 시약을 이용한 광반응 조건을 최적화하고, 질량분석과 연계해 표지된 단백질을 동정했습니다.",
-    result: "특정 마커 단백질 주변의 근접 상호작용 후보군을 새롭게 발굴했습니다.",
-    outcome: "국내 학술대회 발표 및 공동연구 협력으로 이어졌습니다." },
-];
+const PROJECTS = [];
 
 const PROJECT_FILTERS = ["전체", "Wet Lab", "Dry Lab", "Exosome", "PIFA"];
 
 const CAREER = [
   { org: "국민대학교 융합바이오학과 박주환교수 연구실", role: "박사후연구원", period: "2026.09 — 현재", desc: "엑소좀 기반 알츠하이머 조기진단 바이오마커 연구 총괄" },
-  { org: "한국과학기술연구원 (KIST)", role: "Post-Doc", period: "2022.03 — 2022.12", desc: "광산화 유도 형광 증폭 기반 초고감도 바이오마커 정량 연구" },
-  { org: "한국과학기술연구원 (KIST)", role: "연구원", period: "2012.07 — 2014.01", desc: "세포외소포체(엑소좀) 분리 및 분석 플랫폼 구축" },
-  { org: "서강대학교", role: "인턴연구원", period: "2009.05 — 2009.08", desc: "미세유체소자 기반 소포체 분리 연구 보조" },
+  { org: "경희대학교 교육대학원", role: "강사", period: "2023.03 — 2023.06", desc: "분석화학 강의" },
+  { org: "바이오소닉스", role: "연구팀 과장", period: "2023.01 — 2023.06", desc: "" },
+  { org: "한국과학기술연구원 (KIST) 뇌융합기술연구단", role: "Post-Doc", period: "2022.08 — 2022.12", desc: "" },
+  { org: "한국과학기술연구원 (KIST) 뇌과학창의연구단", role: "Post-Doc", period: "2022.03 — 2022.07", desc: "광산화 유도 형광 증폭 기반 초고감도 바이오마커 정량 연구" },
+  { org: "한국과학기술연구원 (KIST) 뇌과학창의연구단", role: "연구원", period: "2014.12 — 2022.02", desc: "" },
+  { org: "한국과학기술연구원 (KIST) 바이오마이크로시스템연구단", role: "석사연구원", period: "2012.07 — 2014.01", desc: "세포외소포체(엑소좀) 분리 및 분석 플랫폼 구축" },
+  { org: "한국과학기술연구원 전명석박사연구실", role: "연구보조원", period: "2012.01 — 2012.04", desc: "각종 실험에 필요한 microchip 제작" },
+  { org: "서강대학교", role: "인턴연구원", period: "2009.05 — 2009.08", desc: "HIV 바이러스 감염경로를 이용한 새로운 약물 전달체 연구 프로젝트 수행" },
 ];
 
 const EDUCATION = [
@@ -178,10 +164,25 @@ const PUBLICATIONS = [
   { year: "2018", type: "논문", title: "Blood-based diagnosis of Alzheimer's disease using PIFA of amyloid β from neuronal exosomes", venue: "Alzheimer's & Dementia", link: "#" },
   { year: "2016", type: "논문", title: "Enhancing surface functionality of reduced graphene oxide biosensors by oxygen plasma treatment for Alzheimer's disease diagnosis", venue: "Biosensors and Bioelectronics, 92, 610-617 · 공동저자", link: "#" },
   { year: "2016", type: "논문", title: "Isolation of extracellular vesicle from blood plasma using electrophoretic migration through porous membrane", venue: "Sensors and Actuators B: Chemical, 233, 289-297 · 공동저자", link: "#" },
-  { year: "2018", type: "발표", title: "과학기술인 협동조합 비즈니스 아이디어 공모전 (과학기술출연연분과)", venue: "과학기술연합대학원대학교", link: "#" },
-  { year: "2018", type: "발표", title: "과학기술인 협동조합 비즈니스 아이디어 공모전", venue: "과학기술정보통신부", link: "#" },
-  { year: "2018", type: "발표", title: "한국세포밖소포체학회 오랄발표", venue: "한국세포밖소포체학회", link: "#" },
-  { year: "2019", type: "발표", title: "뇌과학연구소 학술대회 포스터 발표", venue: "한국과학기술연구원", link: "#" },
+  { year: "2011", type: "학회발표", title: "대한화학회 (KCS) 107회 - 포스터 발표", venue: "Size-dependent Separation of Giant Unilamellar Vesicles Using Pinched Flow Fractionation Devices", authors: "", link: "#" },
+  { year: "2010", type: "학회발표", title: "대한화학회 (KCS) 106회 - 포스터 발표", venue: "Size Selective Separation of Giant Unilamellar Vesicles Using a Microfluidic chip", authors: "Youhee Heo, Kiseong Lee, Jongsik Shin, Kwanwoo Shin, Gi-ra Yi", link: "#" },
+  { year: "2010", type: "학회발표", title: "대한화학회 (KCS) 105회 - 포스터 발표", venue: "Filtration of variously sized giant unilamellar vesicles using microfluidic chip", authors: "Youhee Heo, Gi-ra Yi, Kwanwoo Shin", link: "#" },
+  { year: "2009", type: "학회발표", title: "대한화학회 (KCS) 104회 - 포스터 발표", venue: "Hydrodynamic separation of giant unilamellar vesicles using microfluidic device", authors: "Youngjun Woo, Youhee Heo, Gi-ra Yi, Kwanwoo Shin", link: "#" },
+  { year: "", type: "학회발표", title: "한국원자력기초공동연구소(BAERI) Workshop - 구두 발표", venue: "Size Selective Separation of Giant Unilamellar Vesicles Using a Microfluidic chip", authors: "Youhee Heo, Gi-ra Yi, Kwanwoo Shin", link: "#" },
+  { year: "", type: "학회발표", title: "13th LB in Canada - 포스터 발표", venue: "Size-Selection of Giant Unilamellar Vesicles Using a Microfluidic chip", authors: "Youhee Heo, YoungJun Woo, Gi-ra Yi, Kwanwoo Shin", link: "#" },
+  { year: "2009", type: "학회발표", title: "1회 YES Workshop - 구두 발표", venue: "Formation of Giant Unilamellar Vesicles and Size-selective filtration using Microfluidic channels", authors: "Youhee Heo, Gi-ra Yi, Kwanwoo Shin", link: "#" },
+  { year: "2013", type: "학회발표", title: "한국마이크로나노시스템학회 - 포스터 발표", venue: "", authors: "허유희, 송현석, 강지윤", link: "#" },
+  { year: "2016", type: "학회발표", title: "IEEE Biosensors - 포스터 발표", venue: "Detection of amyloid β oligomer by same antibody sandwich assay (SAS) with highly sensitive bead-based electrochemical impedance sensor (BEIS) for Alzheimer disease diagnosis", authors: "Youhee Heo, Jae-hoon Ji, Kyeong-sik Shin, Soo Hyun Lee, Kwanwoo Shin, Jiyoon Kang", link: "#" },
+  { year: "2017", type: "학회발표", title: "한국바이오칩학회(KBCS) - 포스터 발표", venue: "Quick Isolation of Exosomes in Plasma Using Magnetic Beads for the Diagnosis of Alzheimer's Disease", authors: "Youhee Heo, Jae-hoon Ji, Kwanwoo Shin, Jiyoon Kang", link: "#" },
+  { year: "2018", type: "학회발표", title: "한국바이오칩학회(KBCS) - 포스터 발표", venue: "Photooxidation-Induced Fluorescence Amplification (PIFA) to Enhance the Sensitivity of Chemifluorescent Immunoassay", authors: "Youhee Heo, Min Cheol Park, Kwanwoo Shin, Ji Yoon Kang", link: "#" },
+  { year: "2018", type: "학회발표", title: "한국바이오칩학회(KBCS) - 포스터 발표", venue: "Photooxidation-Induced Fluorescence Amplification (PIFA) to Enhance the Sensitivity of Chemifluorescent Immunoassay", authors: "Youhee Heo, Min Cheol Park, Kwanwoo Shin, Ji Yoon Kang", link: "#" },
+  { year: "2017", type: "학회발표", title: "한국엑소좀학회(KSEV) - 포스터 발표", venue: "Amyloid beta level in neuronal exosomes measured by highly sensitive photooxidation-induced fluorescence amplification for the diagnosis of Alzheimer's disease", authors: "Youhee Heo, Min Cheol Park, Junwoo Lee, Jeong Hoon Lee, Kwanwoo Shin, Jiyoon Kang", link: "#" },
+  { year: "2017", type: "학회발표", title: "Micro TAS (US) - 포스터 발표", venue: "Quick Immunoassay of amyloid beta (Aβ) in exosomes from plasma using magnetic microparticles in water-oil droplets for the diagnosis of Alzheimer's disease", authors: "Youhee Heo, Minjun Park, Jae Hoon Ji, Kyeong-Sik Shin, Min Cheol Park, Kwanwoo Shin, Ji Yoon Kang", link: "#" },
+  { year: "2018", type: "학회발표", title: "AAIC - 포스터 발표", venue: "Blood-based Diagnosis of Alzheimer's Disease using Photooxidation-Induced Fluorescence Amplification (PIFA) of Amyloid β from Neuronal Exosomes", authors: "", link: "#" },
+  { year: "2018", type: "학회발표", title: "한국엑소좀학회(KSEV) - 구두 발표", venue: "Ultrasensitive Quantification of Amyloid β in exosomes for Alzheimer's Disease diagnosis with Photooxidation-Induced Fluorescence Amplification (PIFA)", authors: "Min Cheol Park, Youhee Heo, Young Ho Park, SangYun Kim, Ji Yoon Kang", link: "#" },
+  { year: "2019", type: "학회발표", title: "KSEV", venue: "Photooxidation-Induced Fluorescence Amplification (PIFA) to Enhance the Sensitivity of Chemifluorescent Immunoassay", authors: "Youhee Heo, Min Cheol Park, Kwanwoo Shin, Ji Yoon Kang", link: "#" },
+  { year: "2019", type: "학회발표", title: "International Society for Extracellular Vesicles (ISEV) in Japan - 포스터 발표", venue: "The Effect of Exosome Purification Method on the Detection of Amyloid β in exosomes with Photooxidation-Induced Fluorescence Amplification (PIFA)", authors: "Youhee Heo, Min Cheol Park, Young Ho Park, SangYun Kim, Kwanwoo Shin, Ji Yoon Kang", link: "#" },
+  { year: "2020", type: "학회발표", title: "한국마이크로나노시스템학회 - 구두 발표", venue: "광산화 형광 증폭 기술을 이용한 초고감도 효소결합면역흡착 분석법 연구", authors: "Youhee Heo, Min Cheol Park, Kwanwoo Shin, Ji Yoon Kang", link: "#" },
   { year: "2016", type: "특허", title: "응집 단백질의 고감도 광산화 증폭 면역 분석을 통한 체액기반의 퇴행성 신경질환 진단 방법", venue: "한국 · 10-2016-0048235 · KIST", link: "#" },
   { year: "2017", type: "특허", title: "신경퇴행성 장애의 진단을 위한 정보 제공 방법", venue: "한국 · 10-2017-0023470 · KIST", link: "#" },
   { year: "2017", type: "특허", title: "Method of quantifying biomarker with high sensitivity using photo-oxidation induced amplification", venue: "미국 · 15/561040 · 앱솔로지", link: "#" },
@@ -197,7 +198,13 @@ const PUBLICATIONS = [
   { year: "2019", type: "특허", title: "Novel method for isolating extracellular vesicles", venue: "미국 · 16/68286 · KIST", link: "#" },
 ];
 
-const AWARDS = [];
+const AWARDS = [
+  { year: "2013", title: "우수포스터상", org: "한국마이크로나노시스템학회" },
+  { year: "2018.10.17", title: "최우수상 — 과학기술인 협동조합 비즈니스 아이디어공모전 (과학기술출연(연)분과)", org: "과학기술연합대학원대학교" },
+  { year: "2018.11.30", title: "장관상 — 과학기술인 협동조합 비즈니스 아이디어 공모전", org: "과학기술정보통신부" },
+  { year: "2018.12.07", title: "Featured Abstract 발표상 — 한국세포밖소포체학회 구두발표", org: "한국세포밖소포체학회" },
+  { year: "2019.11.08", title: "우수포스터상 — 뇌과학연구소 학술대회 포스터 발표", org: "한국과학기술연구원" },
+];
 
 /* ---------- Reveal ---------- */
 function Reveal({ children, className = "", delay = 0 }) {
@@ -470,7 +477,7 @@ function Projects() {
     <section id="projects-section" className="py-14 md:py-20">
       <Reveal>
         <SectionHeader n="04" titleEn="Research Projects" />
-        <p className="text-[var(--text-body)] mb-6">연구 프로젝트</p>
+        <p className="text-[var(--text-body)] mb-6">수행 프로젝트 목록</p>
         <div className="flex flex-wrap gap-2 mb-10">
           {PROJECT_FILTERS.map((f) => (
             <button key={f} onClick={() => setFilter(f)}
@@ -525,7 +532,7 @@ function Publications() {
         <SectionHeader n="05" titleEn="Publications & Patents" />
         <p className="text-[var(--text-body)] mb-6">논문 및 특허</p>
         <div className="flex flex-wrap items-center gap-2 mb-8">
-          {["전체", "논문", "발표", "특허"].map((t) => (
+          {["전체", "논문", "특허", "학회발표"].map((t) => (
             <button key={t} onClick={() => setType(t)}
               className={`text-sm px-4 py-2 rounded-full border transition focus-ring ${type === t ? "bg-[var(--blue)] border-[var(--blue)] text-white" : "bg-white border-[var(--border-card)] text-[var(--text-body)] hover:border-[var(--blue)] hover:text-[var(--blue)]"}`}>
               {t}
@@ -544,7 +551,8 @@ function Publications() {
                 <span className="text-xs font-medium shrink-0 bg-[var(--bg-page)] border border-[var(--border-card)] rounded-full px-2.5 py-1 text-[var(--text-body)]">{pub.type}</span>
                 <div className="min-w-0">
                   <p className="text-sm font-medium truncate">{pub.title}</p>
-                  <p className="text-xs text-[var(--text-muted)] truncate">{pub.venue}</p>
+                  {pub.venue && <p className="text-xs text-[var(--text-muted)] truncate">{pub.venue}</p>}
+                  {pub.authors && <p className="text-xs text-[var(--text-muted)] truncate">{pub.authors}</p>}
                 </div>
               </div>
               <Icon name="external-link" size={15} className="text-[var(--text-muted)] group-hover:text-[var(--blue)] shrink-0" />
@@ -566,14 +574,16 @@ function Awards() {
         <p className="text-[var(--text-body)] mb-10">수상내역</p>
       </Reveal>
       {AWARDS.length > 0 ? (
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid gap-3">
           {AWARDS.map((a, i) => (
-            <Reveal key={a.title} delay={i * 100}>
-              <div className="card rounded-2xl p-6 h-full flex flex-col gap-2">
-                <Icon name="award" size={18} className="text-[var(--blue)]" />
-                <p className="font-mono text-xs text-[var(--text-muted)] mt-2">{a.year}</p>
-                <h4 className="font-display text-base font-bold">{a.title}</h4>
-                <p className="text-sm text-[var(--text-body)]">{a.org}</p>
+            <Reveal key={a.title} delay={i * 60}>
+              <div className="card rounded-xl p-5 flex items-center gap-4">
+                <span className="font-mono text-xs text-[var(--blue)] shrink-0">{a.year}</span>
+                <Icon name="award" size={15} className="text-[var(--blue)] shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-sm font-medium truncate">{a.title}</p>
+                  <p className="text-xs text-[var(--text-muted)] truncate">{a.org}</p>
+                </div>
               </div>
             </Reveal>
           ))}
@@ -627,7 +637,7 @@ function Footer() {
   return (
     <footer className="border-t border-[var(--border-card)] mt-4">
       <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-3">
-        <p className="text-xs text-[var(--text-muted)]">© 2026 Heo Yuhui. All rights reserved.</p>
+        <p className="text-xs text-[var(--text-muted)]">© 2026 Heo Youhee. All rights reserved.</p>
         <p className="text-xs text-[var(--text-muted)] font-mono">Last updated 2026.07.31</p>
       </div>
       {showTop && (
