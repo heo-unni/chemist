@@ -111,7 +111,7 @@ const NAV_ITEMS = [
   { id: "skills", label: "기술 역량" },
   { id: "experience", label: "경력·학력" },
   { id: "projects-section", label: "수행 프로젝트 목록" },
-  { id: "publications", label: "논문·특허" },
+  { id: "publications", label: "논문·특허·학회발표" },
   { id: "awards", label: "수상내역" },
   { id: "contact", label: "연락처" },
 ];
@@ -154,16 +154,16 @@ const EDUCATION = [
 ];
 
 const PUBLICATIONS = [
-  { year: "2023", type: "논문", title: "Beads- and oil-free single molecule assay with immuno-RCA for SARS-CoV-2 detection from saliva", venue: "Biosensors and Bioelectronics", link: "#" },
+  { year: "2023", type: "논문", title: "Beads- and oil-free single molecule assay with immuno-RCA for SARS-CoV-2 detection from saliva", venue: "Biosensors and Bioelectronics 232, 115316", authors: "J Park, M Park, J Kim, Y Heo, BH Han, N Choi, C Park, R Lee, DG Lee, S Chung, JY Kang", link: "https://doi.org/10.1016/j.bios.2023.115316" },
   { year: "2022", type: "논문", title: "Plasma levels of exosome-bound Aβs accurately identify Alzheimer's disease patients", venue: "Alzheimer's & Dementia", link: "#" },
-  { year: "2021", type: "논문", title: "Photooxidation-induced fluorescence amplification system for an ultra-sensitive enzyme-linked immunosorbent assay (ELISA)", venue: "Scientific Reports, 11(1), 1-10 · 제1저자", link: "#" },
-  { year: "2020", type: "논문", title: "Nanoelectrical characterization of individual exosomes secreted by Aβ42-ingested cells using electrostatic force microscopy", venue: "Nanotechnology, 32, 025705 · 공동저자", link: "#" },
-  { year: "2020", type: "논문", title: "Isolation of extracellular vesicles from small volumes of plasma using a microfluidic aqueous two-phase system", venue: "Lab on a Chip, 20, 3552-3559 · 공동저자", link: "#" },
-  { year: "2020", type: "논문", title: "Enhanced paper-based ELISA for simultaneous EVs/exosome isolation and detection using streptavidin agarose-based immobilization", venue: "Analyst, 145(1), 157-164 · 공동저자", link: "#" },
-  { year: "2019", type: "논문", title: "Novel highly-sensitive method for identification of Alzheimer's diseases with human blood", venue: "Alzheimer's & Dementia", link: "#" },
+  { year: "2021", type: "논문", title: "Photooxidation-induced fluorescence amplification system for an ultra-sensitive enzyme-linked immunosorbent assay (ELISA)", venue: "Scientific Reports 11, 5831", authors: "Y Heo, K Shin, MC Park, JY Kang", link: "https://www.nature.com/articles/s41598-021-85107-7" },
+  { year: "2020", type: "논문", title: "Nanoelectrical characterization of individual exosomes secreted by Aβ42-ingested cells using electrostatic force microscopy", venue: "Nanotechnology 32 (2), 025705", authors: "Y Choi, SM Kim, Y Heo, G Lee, JY Kang, DS Yoon", link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ijfkcJsAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=ijfkcJsAAAAJ:k4O5U3vRA4YC" },
+  { year: "2020", type: "논문", title: "Isolation of extracellular vesicles from small volumes of plasma using a microfluidic aqueous two-phase system", venue: "Lab on a Chip 20, 3552-3559", authors: "BH Han, S Kim, G Seo, Y Heo, S Chung, JY Kang", link: "https://pubs.rsc.org/en/content/articlelanding/2020/lc/d0lc00345j" },
+  { year: "2020", type: "논문", title: "Enhanced paper-based ELISA for simultaneous EVs/exosome isolation and detection using streptavidin agarose-based immobilization", venue: "Analyst 145(1), 157-164", authors: "J Lee, H Kim, Y Heo, YK Yoo, SI Han, C Kim, D Hur, H Kim, JY Kang, JH Lee", link: "https://pubs.rsc.org/en/content/articlelanding/2020/an/c9an01140d" },
+  { year: "2019", type: "논문", title: "Novel highly-sensitive method for identification of Alzheimer's diseases with human blood", venue: "Alzheimer's & Dementia", authors: "KS Shin, M Kim, Y Heo, JY Kang", link: "#" },
   { year: "2018", type: "논문", title: "Blood-based diagnosis of Alzheimer's disease using PIFA of amyloid β from neuronal exosomes", venue: "Alzheimer's & Dementia", link: "#" },
-  { year: "2016", type: "논문", title: "Enhancing surface functionality of reduced graphene oxide biosensors by oxygen plasma treatment for Alzheimer's disease diagnosis", venue: "Biosensors and Bioelectronics, 92, 610-617 · 공동저자", link: "#" },
-  { year: "2016", type: "논문", title: "Isolation of extracellular vesicle from blood plasma using electrophoretic migration through porous membrane", venue: "Sensors and Actuators B: Chemical, 233, 289-297 · 공동저자", link: "#" },
+  { year: "2016", type: "논문", title: "Enhancing surface functionality of reduced graphene oxide biosensors by oxygen plasma treatment for Alzheimer's disease diagnosis", venue: "Biosensors and Bioelectronics 92, 610-617", authors: "MS Chae, J Kim, D Jeong, YS Kim, JH Roh, SM Lee, Y Heo, JY Kang, JH Lee, DS Yoon, TG Kim, ST Chang, KS Hwang", link: "https://www.sciencedirect.com/science/article/abs/pii/S0956566316310673" },
+  { year: "2016", type: "논문", title: "Isolation of extracellular vesicle from blood plasma using electrophoretic migration through porous membrane", venue: "Sensors and Actuators B: Chemical 233, 289-297", link: "#" },
   { year: "2011", type: "학회발표", title: "대한화학회 (KCS) 107회 - 포스터 발표", venue: "Size-dependent Separation of Giant Unilamellar Vesicles Using Pinched Flow Fractionation Devices", authors: "", link: "#" },
   { year: "2010", type: "학회발표", title: "대한화학회 (KCS) 106회 - 포스터 발표", venue: "Size Selective Separation of Giant Unilamellar Vesicles Using a Microfluidic chip", authors: "Youhee Heo, Kiseong Lee, Jongsik Shin, Kwanwoo Shin, Gi-ra Yi", link: "#" },
   { year: "2010", type: "학회발표", title: "대한화학회 (KCS) 105회 - 포스터 발표", venue: "Filtration of variously sized giant unilamellar vesicles using microfluidic chip", authors: "Youhee Heo, Gi-ra Yi, Kwanwoo Shin", link: "#" },
@@ -174,7 +174,6 @@ const PUBLICATIONS = [
   { year: "2013", type: "학회발표", title: "한국마이크로나노시스템학회 - 포스터 발표", venue: "", authors: "허유희, 송현석, 강지윤", link: "#" },
   { year: "2016", type: "학회발표", title: "IEEE Biosensors - 포스터 발표", venue: "Detection of amyloid β oligomer by same antibody sandwich assay (SAS) with highly sensitive bead-based electrochemical impedance sensor (BEIS) for Alzheimer disease diagnosis", authors: "Youhee Heo, Jae-hoon Ji, Kyeong-sik Shin, Soo Hyun Lee, Kwanwoo Shin, Jiyoon Kang", link: "#" },
   { year: "2017", type: "학회발표", title: "한국바이오칩학회(KBCS) - 포스터 발표", venue: "Quick Isolation of Exosomes in Plasma Using Magnetic Beads for the Diagnosis of Alzheimer's Disease", authors: "Youhee Heo, Jae-hoon Ji, Kwanwoo Shin, Jiyoon Kang", link: "#" },
-  { year: "2018", type: "학회발표", title: "한국바이오칩학회(KBCS) - 포스터 발표", venue: "Photooxidation-Induced Fluorescence Amplification (PIFA) to Enhance the Sensitivity of Chemifluorescent Immunoassay", authors: "Youhee Heo, Min Cheol Park, Kwanwoo Shin, Ji Yoon Kang", link: "#" },
   { year: "2018", type: "학회발표", title: "한국바이오칩학회(KBCS) - 포스터 발표", venue: "Photooxidation-Induced Fluorescence Amplification (PIFA) to Enhance the Sensitivity of Chemifluorescent Immunoassay", authors: "Youhee Heo, Min Cheol Park, Kwanwoo Shin, Ji Yoon Kang", link: "#" },
   { year: "2017", type: "학회발표", title: "한국엑소좀학회(KSEV) - 포스터 발표", venue: "Amyloid beta level in neuronal exosomes measured by highly sensitive photooxidation-induced fluorescence amplification for the diagnosis of Alzheimer's disease", authors: "Youhee Heo, Min Cheol Park, Junwoo Lee, Jeong Hoon Lee, Kwanwoo Shin, Jiyoon Kang", link: "#" },
   { year: "2017", type: "학회발표", title: "Micro TAS (US) - 포스터 발표", venue: "Quick Immunoassay of amyloid beta (Aβ) in exosomes from plasma using magnetic microparticles in water-oil droplets for the diagnosis of Alzheimer's disease", authors: "Youhee Heo, Minjun Park, Jae Hoon Ji, Kyeong-Sik Shin, Min Cheol Park, Kwanwoo Shin, Ji Yoon Kang", link: "#" },
@@ -543,7 +542,7 @@ function Publications() {
 
       <div className="grid gap-3">
         {filtered.map((pub, i) => (
-          <Reveal key={pub.title} delay={i * 60}>
+          <Reveal key={`${pub.type}-${pub.year}-${i}`} delay={i * 60}>
             <a href={pub.link} target="_blank" rel="noopener noreferrer"
               className="card rounded-xl p-5 flex items-center justify-between gap-4 hover:border-[var(--blue)]/50 transition group focus-ring">
               <div className="flex items-center gap-4 min-w-0">
@@ -567,16 +566,17 @@ function Publications() {
 
 /* ---------- Awards ---------- */
 function Awards() {
+  const sorted = useMemo(() => [...AWARDS].sort((a, b) => b.year.localeCompare(a.year)), []);
   return (
     <section id="awards" className="py-14 md:py-20">
       <Reveal>
         <SectionHeader n="06" titleEn="Awards" />
         <p className="text-[var(--text-body)] mb-10">수상내역</p>
       </Reveal>
-      {AWARDS.length > 0 ? (
+      {sorted.length > 0 ? (
         <div className="grid gap-3">
-          {AWARDS.map((a, i) => (
-            <Reveal key={a.title} delay={i * 60}>
+          {sorted.map((a, i) => (
+            <Reveal key={`award-${i}`} delay={i * 60}>
               <div className="card rounded-xl p-5 flex items-center gap-4">
                 <span className="font-mono text-xs text-[var(--blue)] shrink-0">{a.year}</span>
                 <Icon name="award" size={15} className="text-[var(--blue)] shrink-0" />
