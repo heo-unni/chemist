@@ -155,7 +155,7 @@ const EDUCATION = [
 
 const PUBLICATIONS = [
   { year: "2023", type: "논문", title: "Beads- and oil-free single molecule assay with immuno-rolling circle amplification for detection of SARS-CoV-2 from saliva", venue: "Biosensors and Bioelectronics 232 (2023), 115316", authors: "Juhwan Park, Minjun Park, Junbeom Kim, Youhee Heo, Bo Hoon Han, Nakwon Choi, Chulmin Park, Raeseok Lee, Dong-Gun Lee, Seok Chung, Ji Yoon Kang", link: "#" },
-  { year: "2021", type: "논문", title: "Photooxidation-induced fluorescence amplification system for an ultra-sensitive enzyme-linked immunosorbent assay (ELISA)", venue: "Scientific Reports, 2021, 11 (1), 1-10", authors: "Youhee Heo, Kwanwoo Shin, Min Cheol Park, Ji Yoon Kang", link: "#" },
+  { year: "2021", type: "논문", title: "Photooxidation-induced fluorescence amplification system for an ultra-sensitive enzyme-linked immunosorbent assay (ELISA)", venue: "Scientific Reports, (2021), 11 (1), 1-10", authors: "Youhee Heo, Kwanwoo Shin, Min Cheol Park, Ji Yoon Kang", link: "#" },
   { year: "2020", type: "논문", title: "Nanoelectrical characterization of individual exosomes secreted by Aβ42-ingested cells using electrostatic force microscopy", venue: "Nanotechnology 32 (2020), 025705", authors: "Yeseong Choi, Su-Mi Kim, Youhee Heo, Gyudo Lee, Ji Yoon Kang, Dae Sung Yoon", link: "#" },
   { year: "2020", type: "논문", title: "Isolation of extracellular vesicles from small volumes of plasma using a microfluidic aqueous two-phase system", venue: "Lab on a Chip 2020 (20), 3552-3559", authors: "Bo Hoon Han, Sumi Kim, Geeyoon Seo, Youhee Heo, Seok Chung, Ji Yoon Kang", link: "#" },
   { year: "2020", type: "논문", title: "Enhanced paper-based ELISA for simultaneous EVs/exosome isolation and detection using streptavidin agarose-based immobilization", venue: "Analyst 2020 145 (1), 157-164", authors: "Junwoo Lee, Hyerin Kim, Youhee Heo, Yong Kyoung Yoo, Sung Il Han, Cheonjung Kim, Don Hur, Hyungsuk Kim, Ji Yoon Kang, Jeong Hoon Lee", link: "#" },
@@ -285,6 +285,8 @@ function Sidebar() {
           <dd className="text-white/90 break-all">chemist84@naver.com</dd>
         </div>
       </dl>
+
+      <div className="h-px w-full mb-4" style={{ background: "linear-gradient(90deg, transparent, #38bdf8, transparent)" }}></div>
 
       <nav className="hidden md:block mt-2">
         <ul className="space-y-1">
@@ -533,7 +535,7 @@ function Publications() {
     <section id="publications" className="py-14 md:py-20">
       <Reveal>
         <SectionHeader n="05" titleEn="Publications & Patents" />
-        <p className="text-[var(--text-body)] mb-6">논문 및 특허</p>
+        <p className="text-[var(--text-body)] mb-6">논문·특허·학회발표</p>
         <div className="flex flex-wrap items-center gap-2 mb-8">
           {["전체", "논문", "전체특허", "국내특허", "해외특허", "학회발표"].map((t) => (
             <button key={t} onClick={() => setType(t)}
@@ -548,17 +550,17 @@ function Publications() {
         {filtered.map((pub, i) => (
           <Reveal key={`${pub.type}-${pub.year}-${i}`} delay={i * 60}>
             <a href={pub.link} target="_blank" rel="noopener noreferrer"
-              className="card rounded-xl p-5 flex items-center justify-between gap-4 hover:border-[var(--blue)]/50 transition group focus-ring">
-              <div className="flex items-center gap-4 min-w-0">
-                <span className="font-mono text-xs text-[var(--blue)] shrink-0">{pub.year}</span>
-                <span className="text-xs font-medium shrink-0 bg-[var(--bg-page)] border border-[var(--border-card)] rounded-full px-2.5 py-1 text-[var(--text-body)]">{pub.type}</span>
-                <div className="min-w-0">
-                  <p className="text-sm font-medium truncate">{pub.title}</p>
-                  {pub.venue && <p className="text-xs text-[var(--text-muted)] truncate">{pub.venue}</p>}
-                  {pub.authors && <p className="text-xs text-[var(--text-muted)] truncate">{pub.authors}</p>}
+              className="card rounded-xl p-5 flex flex-col gap-2 hover:border-[var(--blue)]/50 transition group focus-ring">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-xs text-[var(--blue)] shrink-0">{pub.year}</span>
+                  <span className="text-xs font-medium shrink-0 bg-[var(--bg-page)] border border-[var(--border-card)] rounded-full px-2.5 py-1 text-[var(--text-body)]">{pub.type}</span>
                 </div>
+                <Icon name="external-link" size={15} className="text-[var(--text-muted)] group-hover:text-[var(--blue)] shrink-0" />
               </div>
-              <Icon name="external-link" size={15} className="text-[var(--text-muted)] group-hover:text-[var(--blue)] shrink-0" />
+              <p className="text-sm font-medium leading-snug">{pub.title}</p>
+              {pub.venue && <p className={`text-xs text-[var(--text-muted)] leading-relaxed ${pub.type === "논문" ? "italic" : ""}`}>{pub.venue}</p>}
+              {pub.authors && <p className="text-xs text-[var(--text-muted)] leading-relaxed">{pub.authors}</p>}
             </a>
           </Reveal>
         ))}
